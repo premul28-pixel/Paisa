@@ -1,0 +1,152 @@
+# ==============================================================================
+# PAISA .gitignore - Security & Build Exclusions
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Sensitive Secrets & Environment Files (CRITICAL SECURITY)
+# ------------------------------------------------------------------------------
+.env
+.env.*
+*.env
+!.env.example
+*.env.json
+secrets.json
+credentials.json
+key.properties
+**/android/key.properties
+*.keystore
+*.jks
+*.p12
+*.pem
+*.key
+*.cer
+*.crt
+*.der
+*.pfx
+
+# Firebase & Cloud Service Credentials
+google-services.json
+GoogleService-Info.plist
+**/firebase_options.dart
+
+# ------------------------------------------------------------------------------
+# Databases, Local Exports & User Backups (Financial Data Protection)
+# ------------------------------------------------------------------------------
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+paisa.db
+*paisa_backup*.json
+*paisa_transactions*.csv
+*paisa_statement*.pdf
+*.backup
+*.bak
+
+# ------------------------------------------------------------------------------
+# Flutter & Dart Build Artifacts
+# ------------------------------------------------------------------------------
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+**/build/
+/coverage/
+**/doc/api/
+
+# Symbolication & Obfuscation
+app.*.symbols
+app.*.map.json
+
+# ------------------------------------------------------------------------------
+# Android Platform Exclusions
+# ------------------------------------------------------------------------------
+.gradle/
+**/.gradle/
+.kotlin/
+**/.kotlin/
+**/android/.gradle/
+**/android/**/gradle-wrapper.jar
+**/android/captures/
+**/android/local.properties
+**/android/**/GeneratedPluginRegistrant.java
+/android/app/debug
+/android/app/profile
+/android/app/release
+.cxx/
+
+# ------------------------------------------------------------------------------
+# iOS & macOS Platform Exclusions
+# ------------------------------------------------------------------------------
+**/ios/**/*.mode1v3
+**/ios/**/*.mode2v3
+**/ios/**/*.moved-aside
+**/ios/**/*.pbxuser
+**/ios/**/*.perspectivev3
+**/ios/**/DerivedData/
+**/ios/**/Icon?
+**/ios/**/Pods/
+**/ios/.symlinks/
+**/ios/Flutter/ephemeral/
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/app.framework
+**/ios/Flutter/flutter_assets/
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/ios/Flutter/flutter_export_environment.sh
+**/ios/ServiceDefinitions.json
+**/ios/Runner/GeneratedPluginRegistrant.*
+**/ios/Flutter/.last_build_id
+
+**/macos/Flutter/ephemeral/
+**/macos/Flutter/GeneratedPluginRegistrant.swift
+
+# ------------------------------------------------------------------------------
+# Windows & Linux Platform Exclusions
+# ------------------------------------------------------------------------------
+**/windows/flutter/ephemeral/
+**/windows/flutter/GeneratedPluginRegistrant.cc
+**/windows/flutter/GeneratedPluginRegistrant.h
+**/linux/flutter/ephemeral/
+
+# Web Exclusions
+**/web/version.json
+
+# ------------------------------------------------------------------------------
+# IDE & Operating System Files
+# ------------------------------------------------------------------------------
+# IntelliJ / Android Studio
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# General Caches and Logs
+*.class
+*.log
+*.pyc
+*.swp
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+.widget_preview/
